@@ -14,7 +14,7 @@ class Yoshi;
 class GrabBlock;
 class Pipe;
 class Coin;
-class DragonCoin;
+class YoshiCoin;
 
 class Player : public Entity
 {
@@ -49,7 +49,7 @@ public:
 
 	int GetLives() const;
 	int GetCoinsCollected() const;
-	int GetDragonCoinsCollected() const;
+	int GetYoshiCoinsCollected() const;
 	int GetRedStarsCollected() const;
 	Item::Type GetExtraItemType() const;
 
@@ -108,7 +108,7 @@ private:
 	void HandleKeyboardInput(double deltaTime);
 	void HandleClimbingStateKeyboardInput(double deltaTime);
 
-	void AddDragonCoin(DragonCoin* dragonCoinPtr);
+	void AddYoshiCoin(DragonCoin* dragonCoinPtr);
 	void AddLife(DOUBLE2 particlePos);
 	void KickHeldItem(double deltaTime, bool gently = false);
 	void ChangePowerupState(PowerupState newPowerupState, bool isUpgrade = true);
@@ -146,7 +146,7 @@ private:
 
 	int m_Lives;
 	int m_Coins;
-	int m_DragonCoins;
+	int m_YoshiCoins;
 	int m_RedStars;
 	int m_Score;
 	int m_LastScoreAdded; // Used for calculating combo scores
