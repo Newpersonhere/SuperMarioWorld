@@ -18,7 +18,7 @@ public:
 		EGG, BABY, WAITING, WILD, FALLING
 	};
 
-	Yoshi(DOUBLE2 position, Level* levelPtr, bool spawnAsAdult = false, Player* playerCarryingPtr = nullptr);
+	Yoshi(DOUBLE2 position, Level* levelPtr, bool spawnAsAdult = true, Player* playerCarryingPtr = nullptr);
 	virtual ~Yoshi();
 
 	Yoshi(const Yoshi&) = delete;
